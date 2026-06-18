@@ -1,0 +1,66 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.note-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.note {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.note_dot_style {
+  width: 17px;
+  height: 17px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+
+.note_quarter {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.note_std {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+
+
+.note:hover {
+  transform: scale(1.2);
+}
+
+#selectedNotes {
+  border: 1px solid #ccc;
+  padding: 10px;
+  min-height: 50px;
+}
+
+.selected-note {
+  display: inline-block;
+  margin: 5px;
+}
+
+.selected-note svg {
+  width: 40px;
+  height: 40px;
+}
+
+
+
+.clearBtn

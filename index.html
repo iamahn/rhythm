@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>beat generator</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/vexflow@4.2.2/build/umd/vexflow.js" defer></script>
+</head>
+<body>
+
+<h2>음표 선택기</h2>
+
+<div class="note-container" id="noteContainer">
+  <img src="note_img/note_whole.svg" class="note_dot_style" data-name="Note01" />
+  <img src="note_img/note_half.svg" class="note_dot_style" data-name="Note02" />
+  <img src="note_img/note_half_dot.svg" class="note_dot_style" data-name="Note03" />
+  <img src="note_img/note_quarter.svg" class="note_std" data-name="Note04" />
+  <img src="note_img/note_quarter_dot.svg" class="note_std" data-name="Note05" />
+  <img src="note_img/note_8th.svg" class="note_std" data-name="Note06" />
+  <img src="note_img/note_8th_dot.svg" class="note_std" data-name="Note07" />
+  <img src="note_img/note_triple.svg" class="note_std" data-name="Note08" />          
+  <img src="note_img/note_16th.svg" class="note_std" data-name="Note09" />
+  <img src="note_img/note_16th_dot.svg" class="note_std" data-name="Note10" />
+  <img src="note_img/note_32nd.svg" class="note_std" data-name="Note11" />
+  <img src="note_img/note_16ths.svg" class="note_std" data-name="Note12" />
+  <img src="note_img/note_5ths.svg" class="note_std" data-name="Note13" />
+  <img src="note_img/note_7ths.svg" class="note_std" data-name="Note14" />
+  <img src="note_img/note_8ths.svg" class="note_std" data-name="Note15" />
+  <img src="note_img/note_swing.svg" class="note_std" data-name="Note16" />
+  <img src="note_img/note_slash.svg" class="note_std" data-name="Note17" />
+  <img src="note_img/rest_whole.svg" class="note_std" data-name="Note18" />
+  <img src="note_img/rest_half.svg" class="note_std" data-name="Note19" />
+  <img src="note_img/rest_quarter.svg" class="note_std" data-name="Note20" />
+  <img src="note_img/rest_quarter_dot.svg" class="note_std" data-name="Note21" />
+  <img src="note_img/rest_8th.svg" class="note_std" data-name="Note22" />
+  <img src="note_img/rest_8th_dot.svg" class="note_std" data-name="Note23" />
+  <img src="note_img/rest_16th.svg" class="note_std" data-name="Note24" />
+  <img src="note_img/rest_32nd.svg" class="note_std" data-name="Note25" />
+  <img src="note_img/rest_64th.svg" class="note_std" data-name="Note26" />
+</div>
+
+<h3>선택한 음표:</h3>
+<button id="clearBtn" style="margin-bottom: 10px; padding: 5px 10px; cursor: pointer;">모두 지우기</button>
+<div id="selectedNotes"></div>
+<button id="generateBtn" style="margin-bottom: 10px; padding: 5px 10px; cursor: pointer;">Generating Rhythms</button>
+
+<div id="rhythmResult"></div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
