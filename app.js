@@ -6,19 +6,37 @@ window.addEventListener('DOMContentLoaded', () => {
   let selectedNotes = []; 
 
   // ─── VexFlow 전용 박자 데이터 정의 ───
+// ─── VexFlow 전용 박자 데이터 정의 (HTML의 Note01 ~ Note26 완벽 대응 버전) ───
   const NOTE_DATA = {
-    "Note01": { keys: ["c/5"], duration: "w", beats: 4 },   // 온음표
-    "Note02": { keys: ["c/5"], duration: "h", beats: 2 },   // 2분음표
-    "Note04": { keys: ["c/5"], duration: "q", beats: 1 },   // 4분음표
-    "Note06": { keys: ["c/5"], duration: "8", beats: 0.5 }, // 8분음표
-    "Note09": { keys: ["c/5"], duration: "16", beats: 0.25 },// 16분음표
+    // 음표 (Notes)
+    "Note01": { keys: ["c/5"], duration: "w", beats: 4 },      // 온음표
+    "Note02": { keys: ["c/5"], duration: "h", beats: 2 },      // 2분음표
+    "Note03": { keys: ["c/5"], duration: "hd", beats: 3 },     // 점2분음표 (v4: hd)
+    "Note04": { keys: ["c/5"], duration: "q", beats: 1 },      // 4분음표
+    "Note05": { keys: ["c/5"], duration: "qd", beats: 1.5 },    // 점4분음표 (v4: qd)
+    "Note06": { keys: ["c/5"], duration: "8", beats: 0.5 },     // 8분음표
+    "Note07": { keys: ["c/5"], duration: "8d", beats: 0.75 },   // 점8분음표 (v4: 8d)
+    "Note08": { keys: ["c/5"], duration: "q", beats: 1 },       // 셋잇단음표 (임시 1박자 처리)
+    "Note09": { keys: ["c/5"], duration: "16", beats: 0.25 },   // 16분음표
+    "Note10": { keys: ["c/5"], duration: "16d", beats: 0.375 }, // 점16분음표
+    "Note11": { keys: ["c/5"], duration: "32", beats: 0.125 },  // 32분음표
+    "Note12": { keys: ["c/5"], duration: "q", beats: 1 },       // 16분음표 묶음 (임시 1박자)
+    "Note13": { keys: ["c/5"], duration: "q", beats: 1 },       // 5연음 (임시 1박자)
+    "Note14": { keys: ["c/5"], duration: "q", beats: 1 },       // 7연음 (임시 1박자)
+    "Note15": { keys: ["c/5"], duration: "h", beats: 2 },       // 8분음표 4개 묶음 (2박자)
+    "Note16": { keys: ["c/5"], duration: "q", beats: 1 },       // 스윙 리듬 (임시 1박자)
+    "Note17": { keys: ["c/5"], duration: "q", beats: 1 },       // 슬래시 노트
 
-    // 쉼표 (duration 뒤에 r 추가)
-    "Note18": { keys: ["b/4"], duration: "wr", beats: 4 },  // 온쉼표
-    "Note19": { keys: ["b/4"], duration: "hr", beats: 2 },  // 2분쉼표
-    "Note20": { keys: ["b/4"], duration: "qr", beats: 1 },  // 4분쉼표
-    "Note22": { keys: ["b/4"], duration: "8r", beats: 0.5 },// 8분쉼표
-    "Note24": { keys: ["b/4"], duration: "16r", beats: 0.25 } // 16분쉼표
+    // 쉼표 (Rests - duration 뒤에 r 추가)
+    "Note18": { keys: ["b/4"], duration: "wr", beats: 4 },     // 온쉼표
+    "Note19": { keys: ["b/4"], duration: "hr", beats: 2 },     // 2분쉼표
+    "Note20": { keys: ["b/4"], duration: "qr", beats: 1 },     // 4분쉼표
+    "Note21": { keys: ["b/4"], duration: "qdr", beats: 1.5 },   // 점4분쉼표
+    "Note22": { keys: ["b/4"], duration: "8r", beats: 0.5 },    // 8분쉼표
+    "Note23": { keys: ["b/4"], duration: "8dr", beats: 0.75 },  // 점8분쉼표
+    "Note24": { keys: ["b/4"], duration: "16r", beats: 0.25 },  // 16분쉼표
+    "Note25": { keys: ["b/4"], duration: "32r", beats: 0.125 }, // 32분쉼표
+    "Note26": { keys: ["b/4"], duration: "64r", beats: 0.0625 } // 64분쉼표
   };
 
   // 이미지 클릭 이벤트 (토글)
